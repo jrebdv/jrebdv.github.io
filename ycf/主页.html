@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国家卫生健康委智慧健康服务平台 - 登录</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            padding: 15px 0;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+
+        }
+
+        .logo {
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1a5fb4;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #666;
+            margin-left: 10px;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 200px);
+            padding: 40px 0;
+            background: #E7F0FB url("https://sp.cpsmnhc.cn/wjw/views/images/body-bg.png") top center no-repeat;
+            min-height: calc(100vh - 236px);
+            padding-top: 24px;
+            padding-bottom: 57px;
+        }
+
+        .login-out {
+            width: 1100px;
+            height: 500px;
+            background: url(https://sp.cpsmnhc.cn/wjw/views/images/login-bg.png) no-repeat;
+            background-size: 100% 100%;
+            margin: 0 auto;
+            padding-top: 14px;
+        }
+
+        .login-box {
+            
+            height: 460px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 475px;
+            padding-left: 33px;
+            padding-right: 30px;
+            /* padding: 0 500px 0 0; */
+            margin-left: 600px;
+        }
+
+        .login-in {
+            float: left;
+            width: 50px;
+            height: 50px;
+            background: url(https://sp.cpsmnhc.cn/wjw/views/images/logo.png) no-repeat;
+            background-size: 100% 100%;
+            margin-right: 7px;
+        }
+
+        .login-title {
+            text-align: center;
+            font-size: 24px;
+            color: #1a5fb4;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .form-input:focus {
+            border-color: #1a5fb4;
+            outline: none;
+        }
+
+        .verification-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .verification-input {
+            flex: 1;
+        }
+
+        .verification-btn {
+            background-color: #f0f4f8;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 0 15px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #1a5fb4;
+            white-space: nowrap;
+            transition: all 0.3s;
+        }
+
+        .verification-btn:hover {
+            background-color: #e6edf5;
+        }
+
+        .verification-btn:disabled {
+            background-color: #f5f5f5;
+            color: #999;
+            cursor: not-allowed;
+        }
+
+        .tip-text {
+            font-size: 12px;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        .agreement-group {
+            display: flex;
+            align-items: flex-start;
+            margin: 20px 0;
+        }
+
+        .agreement-checkbox {
+            margin-right: 8px;
+            margin-top: 3px;
+        }
+
+        .agreement-text {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .agreement-link {
+            color: #1a5fb4;
+            text-decoration: none;
+        }
+
+        .agreement-link:hover {
+            text-decoration: underline;
+        }
+
+        .login-btn {
+            width: 100%;
+            background-color: #1a5fb4;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-btn:hover {
+            background-color: #0f4a9c;
+        }
+
+        .login-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+            gap: 20px;
+        }
+
+        .login-link {
+            color: #1a5fb4;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .login-link:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background: #1E2C45;
+            padding: 30px 0 20px;
+            margin-top: 40px;
+            font-size: 13px;
+            color: #FFFFFF;
+        }
+
+        .footer-links {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .footer-link {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+        .footer-info {
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .login-box {
+                padding: 30px 20px;
+            }
+
+            .login-links {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo-area">
+                <div>
+                    <div class="login-in"></div>
+                    <span class="title">国家卫生健康委智慧健康服务平台</span><br>
+                    <span class="subtitle">食品安全标准项目实施信息化管理和评价系统</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="login-out">
+                <div class="login-box">
+                    <h2 class="login-title">欢迎登录</h2>
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label class="form-label">账号</label>
+                            <input type="text" class="form-input" placeholder="请输入账号" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">验证码</label>
+                            <div class="verification-group">
+                                <input type="text" class="form-input verification-input" placeholder="请输入验证码" required>
+                                <button type="button" class="verification-btn" id="getCodeBtn">获取验证码</button>
+                            </div>
+                            <div class="tip-text">(首次登录默认密码:sps123)</div>
+                        </div>
+
+                        <div class="agreement-group">
+                            <input type="checkbox" class="agreement-checkbox" id="agreement" required>
+                            <label for="agreement" class="agreement-text">
+                                已阅读并同意以下
+                                <a href="#" class="agreement-link">平台服务协议</a>、
+                                <a href="#" class="agreement-link">隐私权政策</a>、
+                                <a href="#" class="agreement-link">法律声明</a>及
+                                <a href="#" class="agreement-link">客户端服务协议</a>。
+                            </label>
+                        </div>
+
+                        <button type="submit" class="login-btn">登录</button>
+
+                        <div class="login-links">
+                            <a href="#" class="login-link">1. 教学视频</a>
+                            <a href="#" class="login-link">2. 联系我们</a>
+                            <a href="" class="login-link">3. 账号注册</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#" class="footer-link">中华人民共和国国家卫生健康委员会</a>
+                <a href="#" class="footer-link">国家卫生健康委智慧健康服务平台</a>
+            </div>
+            <div class="footer-info">
+                <p>地址:北京市西城区西直门外南路3号</p>
+                <p>邮箱:shipinsi@cpsmnhc.cn</p>
+                <p>ICP安备编号:京ICP备33010302001号</p>
+                <p>中华人民共和国国家卫生委员会 版权所有</p>
+                <p>技术支持 国家智慧健康服务平台</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

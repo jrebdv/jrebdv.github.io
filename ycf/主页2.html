@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资料填写与审核</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+        }
+        
+        .header {
+            margin-bottom: 30px;
+        }
+        
+        .title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .contact-link {
+            color: #1a5fb4;
+            text-decoration: none;
+        }
+        
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+        
+        .form-section {
+            margin-bottom: 25px;
+        }
+        
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            flex: 1;
+            min-width: 300px;
+            margin-right: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .form-group:last-child {
+            margin-right: 0;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #444;
+            font-weight: 500;
+        }
+        
+        .required::after {
+            content: "*";
+            color: #e74c3c;
+            margin-left: 4px;
+        }
+        
+        .form-input, .form-select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ffc8d6;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #333;
+            background-color: #fff;
+            transition: border-color 0.3s;
+        }
+        
+        .form-input:focus, .form-select:focus {
+            outline: none;
+            border-color: #1a5fb4;
+            box-shadow: 0 0 0 2px rgba(26, 95, 180, 0.1);
+        }
+        
+        .form-input::placeholder {
+            color: #999;
+        }
+        
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 10px;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .radio-input {
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        .radio-label {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .radio-title {
+            font-weight: 500;
+            color: #444;
+            margin-bottom: 4px;
+        }
+        
+        .radio-description {
+            font-size: 13px;
+            color: #777;
+            line-height: 1.5;
+        }
+        
+        .select-unit-btn {
+            background-color: #f0f4f8;
+            color: #1a5fb4;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 12px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-bottom: 15px;
+            transition: background-color 0.3s;
+        }
+        
+        .select-unit-btn:hover {
+            background-color: #e6edf5;
+        }
+        
+        .hint {
+            font-size: 13px;
+            color: #e67e22;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        
+        .unit-display {
+            background-color: #f9f9f9;
+            border: 1px dashed #ddd;
+            border-radius: 4px;
+            padding: 12px 15px;
+            color: #777;
+        }
+        
+        .submit-section {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .submit-btn {
+            background-color: #1a5fb4;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 14px 50px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #0f4a9c;
+        }
+        
+        .footer-links {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .footer-link {
+            color: #1a5fb4;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .form-group {
+                min-width: 100%;
+                margin-right: 0;
+            }
+            
+            .footer-link {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">说明</h1>
+            <p class="description">
+                请如实填写以下资料，相关处室审核开通后将已短信形式通知，请注意查收，若长时间没有收到请
+                <a href="#" class="contact-link">联系我们</a>
+            </p>
+        </div>
+        
+        <form id="applicationForm">
+            <div class="form-section">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label required">姓名</label>
+                        <input type="text" class="form-input" placeholder="请输入您的姓名" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label required">性别</label>
+                        <select class="form-select">
+                            <option value="male" selected>男</option>
+                            <option value="female">女</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label required">身份证</label>
+                        <input type="text" class="form-input" placeholder="请输入您18位身份证号" maxlength="18" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label required">手机号</label>
+                        <input type="tel" class="form-input" placeholder="请输入您常用手机号" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label required">邮箱</label>
+                        <input type="email" class="form-input" placeholder="请输入您常用邮箱" required>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <button type="button" class="select-unit-btn">点我选申报单位</button>
+                <div class="hint">提示: 若您单位不存在，请点联系我们补充!</div>
+                
+                <div class="form-group">
+                    <label class="form-label required">申报单位</label>
+                    <div class="unit-display">请上面选择您所在申报单位，若没有请联系我们</div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <label class="form-label required">申请岗位</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="job1" name="job" class="radio-input" value="unit_manager" checked>
+                        <label for="job1" class="radio-label">
+                            <span class="radio-title">单位经办岗</span>
+                            <span class="radio-description">直属单位中，该资金负责人或主要执行人。</span>
+                        </label>
+                    </div>
+                    
+                    <div class="radio-option">
+                        <input type="radio" id="job2" name="job" class="radio-input" value="department_auditor">
+                        <label for="job2" class="radio-label">
+                            <span class="radio-title">食品司处室审核岗</span>
+                            <span class="radio-description">卫健委食品司相关处室的管理人员。</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="submit-section">
+                <button type="submit" class="submit-btn">点击送审</button>
+            </div>
+        </form>
+        
+        <div class="footer-links">
+            <p>提示: 若已注册，<a href="#" class="footer-link">点击返回登录</a>，若有疑问请<a href="#" class="footer-link">联系我们</a>。</p>
+        </div>
+    </div>
+</body>
+</html>
