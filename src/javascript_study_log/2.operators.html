@@ -1,0 +1,124 @@
+<!-- 比较与运算符 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // javascript中的运算符
+        let a = 5;
+        let b = 10;
+        let c = 2;
+        // console.log('a+b=',a + b); // 加法
+        // console.log('a-b=',a - b); // 减法
+        // console.log('a*b=',a * b); // 乘法
+        // console.log('a/b=',a / b); // 除法
+        // console.log('a%b=', a % b); // 取余
+        // console.log('a**b=',a ** b); // 幂运算
+
+        // console.log('a>b=',a > b); // 大于
+        // console.log('a<b=',a < b); // 小于
+
+        // console.log('a>=b=',a >= b); // 大于等于
+        // console.log('a<=b=',a <= b); // 小于等于
+
+        // console.log('a==b=',a == b); // 等于
+        // console.log('a!=b=',a != b); // 不等于
+        // console.log('a===b=',a === b); // 严格等于
+        // 字符串
+        // console.log('1' + 0) //10
+        // console.log('1' - 0) //10   隐式转换
+        // console.log(1 * '0')
+        // console.log(1/'2')
+        // 布尔值
+        // true=1
+        // false=0
+        console.log(true + true) //2
+        console.log(true - false) //1
+        console.log(true * 2) //2
+        // null = false = 0
+        console.log(null + 1) //1
+        console.log(null - 1) //-1
+
+        // undefined = NaN(非数字)
+        console.log(undefined + 1) //NaN
+        // '' = false = 0
+        console.log('' - 1) //
+
+        console.log('' == 0) //true
+        console.log('' === 0) //false
+        console.log(undefined == 0) //false
+        //空数组 [] = false = 0
+        console.log([] == false) //true
+        //空对象 {} = true
+        console.log({} == true) 
+
+
+        console.log(!true) //取反
+        // console.log('a!==b=',a !== b); // 严格不等于
+
+        // console.log('a&&b=',a && b); // 逻辑与  且
+        console.log('a&&b=', 1 && 2 && 0 && 4); // 逻辑与  且
+
+        // console.log('a||b=',a || b); // 逻辑或
+        console.log('a||b=', 0 || 0 || 0 || 1 || 0); // 逻辑或
+
+        // console.log('!a=',!a); // 逻辑非
+
+        console.log('!0=', !undefined); // 逻辑非
+
+
+        console.log('a + b * c=', a + b * c); // 运算符优先级
+
+        console.log('(a + b) * c=', (a + b) * c); // 运算符优先级
+
+        console.log('a++=', a++); // 自增,先使用后加1
+        console.log('a=', a);
+        // a=6
+        console.log('++a=', ++a); // 自增,先加1后使用
+
+        // console.log('a--=',a--); // 自减,先使用后减1
+        // console.log('--a=',--a); // 自减,先减1后使用
+
+        let q = 10;
+        // console.log( q++ - --q ); // 赋值运算符
+        // console.log(q-- + q + ++q);
+
+        // console.log('a += b =', a += b); // 赋值运算符
+        // 'a+=b' = 'a = a + b'
+        let w = 5;
+        w += q
+        console.log(w);
+        // console.log('a -= b =', a -= b); // 赋值运算符
+        console.log(w -= q);
+        // console.log('a *= b =', a *= b); // 赋值运算符
+        // console.log('a /= b =', a /= b); // 赋值运算符
+        // console.log('a %= b =', a %= b); // 赋值运算符
+        // console.log('a **= b =', a **= b); // 赋值运算符
+
+
+        var x = {} //引用类型, x其实只是个地址（xxaxagh--1aj一个地址码）
+        var y = {};// 不同的地址
+        var z = x; // z和x是同一个地址
+
+        // 三元运算  条件 ? true : false
+        let age = 15;
+        let result = age >= 18 ? "成年人" : "未成年人";
+        console.log(result);
+
+        let result2 = age >= 18 ? "成年人" : age >= 16 ? "青少年" : "未成年人";
+
+        console.log(result2);
+        // Number(null); // 0
+        console.log(0.1 + 0.2); // 0.30000000000000004
+    </script>
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS 运算符练习</title>
+</head>
+<body>
+  <h1>JavaScript 运算符练习</h1>
+  <p>请先<strong>不要运行</strong>，先写出你认为的结果，再打开控制台验证。</p>
+
+  <script>
+    // =============================
+    // 基础数据
+    // =============================
+    let a = 8;
+    let b = 3;
+    let c = 4;
+
+    console.log('初始值：a =', a, ', b =', b, ', c =', c);
+
+    // =============================
+    // 一、算术运算符
+    // =============================
+    console.log('【算术运算符】');
+    console.log('a + b =', a + b);     // ？
+    console.log('a - b =', a - b);     // ？
+    console.log('a * b =', a * b);     // ？
+    console.log('a / b =', a / b);     // ？
+    console.log('a % b =', a % b);     // ？
+    console.log('a ** c =', a ** c);   // ？
+
+    // =============================
+    // 二、比较运算符
+    // =============================
+    console.log('【比较运算符】');
+    console.log('a > b =', a > b);     
+    console.log('a < b =', a < b);     
+    console.log('a >= b =', a >= b);   
+    console.log('a <= b =', a <= b);   
+    console.log('a == b =', a == b);   
+    console.log('a === b =', a === b); 
+    console.log('a != b =', a != b);   
+    console.log('a !== b =', a !== b); 
+
+    // =============================
+    // 三、逻辑运算符（重点：返回值）
+    // =============================
+    console.log('【逻辑运算符】');
+    console.log('a && b =', a && b);   
+    console.log('a || b =', a || b);   
+    console.log('!a =', !a);           
+    console.log('!b =', !b);           
+
+    // =============================
+    // 四、运算符优先级
+    // =============================
+    console.log('【运算符优先级】');
+    console.log('a + b * c =', a + b * c);       
+    console.log('(a + b) * c =', (a + b) * c);   
+
+    // =============================
+    // 五、自增 / 自减（高频翻车点）
+    // =============================
+    console.log('【自增 / 自减】');
+
+    console.log('a++ =', a++);   // ？
+    console.log('现在 a =', a); // ？
+
+    console.log('++a =', ++a);  // ？
+    console.log('现在 a =', a); // ？
+
+    console.log('a-- =', a--);  // ？
+    console.log('现在 a =', a); // ？
+
+    console.log('--a =', --a);  // ？
+    console.log('现在 a =', a); // ？
+
+    // =============================
+    // 六、复合赋值运算符
+    // =============================
+    console.log('【复合赋值运算符】');
+
+    a += b;
+    console.log('a += b ->', a);
+
+    a -= b;
+    console.log('a -= b ->', a);
+
+    a *= b;
+    console.log('a *= b ->', a);
+
+    a /= b;
+    console.log('a /= b ->', a);
+
+    a %= b;
+    console.log('a %= b ->', a);
+
+    a **= b;
+    console.log('a **= b ->', a);
+
+    // =============================
+    // 七、综合题（压轴）
+    // =============================
+    console.log('【综合题】');
+
+    let x = 6;
+    let y = 2;
+
+    let result = x++ + y * 3 > 10 && x < 10;
+
+    console.log('result =', result);
+    console.log('最终 x =', x);
+  </script>
+</body>
+</html>
