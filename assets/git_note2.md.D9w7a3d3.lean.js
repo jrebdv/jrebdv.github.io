@@ -1,0 +1,1 @@
+import{_ as t,c as _,o as e,ah as i}from"./chunks/framework.EDBEUcu8.js";const b=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"git/note2.md","filePath":"git/note2.md"}'),a={name:"git/note2.md"};function r(s,p,g,h,o,n){return e(),_("div",null,[...p[0]||(p[0]=[i("",48)])])}const c=t(a,[["render",r]]);export{b as __pageData,c as default};
