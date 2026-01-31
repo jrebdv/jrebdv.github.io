@@ -10,6 +10,7 @@
             display: flex;
             margin-top: 20px;
             margin-left: 150px;
+            width: 1200px;
             font-weight: bold;
             font-size: 50px;
             position: relative;
@@ -17,7 +18,7 @@
 
         }
 
-        .box21 { 
+        .box21 {
             margin-top: 20px;
             margin-left: 500px;
             font-weight: bold;
@@ -32,7 +33,7 @@
             position: absolute;
             width: 120px;
             height: 100px;
-            font-size: 17px;
+            font-size: 20px;
             display: none;
             z-index: 10;
             background-color: rgb(218, 218, 241);
@@ -121,29 +122,119 @@
             width: 1200px;
         }
 
+        .boxk1 {
+            position: absolute;
+            margin-left: 950px;
+            margin-top: -330px;
+            width: 90px;
+            height: 30px;
+            background-color: rgb(78, 81, 83);
+            cursor: pointer;
+        }
+
+        .boxk1:hover {
+            background-color: rgb(57, 59, 59);
+        }
+
+        .boxk2 {
+            position: absolute;
+            margin-left: 1035px;
+            margin-top: -300px;
+            width: 90px;
+            height: 30px;
+            background-color: rgb(78, 81, 83);
+            cursor: pointer;
+        }
+
+        .boxk2:hover {
+            background-color: rgb(57, 59, 59);
+        }
+
         .box6 {
             position: absolute;
             margin-left: 400px;
-            margin-top: -500px;
+            margin-top: -530px;
             font-size: 25px;
             font-weight: bold;
+            cursor: default;
+
         }
 
         .box7 {
             position: absolute;
             margin-left: 400px;
-            margin-top: -450px;
+            margin-top: -470px;
             font-size: 15px;
+            cursor: default;
 
         }
 
         .box8 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: absolute;
-            margin-left: 400px;
-            margin-top: -250px;
+            margin-left: 403px;
+            margin-top: -245px;
+            cursor: pointer;
+            z-index: 10;
+            height: 240px;
+            width: 380px;
+        }
 
+        .box8:hover {
+            background-color: rgba(100, 87, 71, 0.304);
 
         }
+
+        .boxb {
+            color: aliceblue;
+
+            display: none;
+        }
+
+        .box8:hover .boxb {
+            display: block;
+            position: absolute;
+            width: 100px;
+            height: 30px;
+            border: 5px solid white;
+            display: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .box81 {
+            position: absolute;
+            margin-left: 806px;
+            margin-top: -245px;
+            cursor: pointer;
+            z-index: 1;
+            height: 240px;
+            width: 381px;
+        }
+
+        .box81:hover {
+
+            background-color: rgba(100, 87, 71, 0.304);
+        }
+
+        .box81:hover .boxb {
+            display: block;
+            position: absolute;
+            width: 100px;
+            height: 30px;
+            margin-top: 110px;
+            margin-left: 130px;
+            border: 5px solid white;
+            display: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
 
         .box9 {
             position: relative;
@@ -151,6 +242,16 @@
             margin-left: 150px;
             display: block;
             width: 1200px;
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+        .box9 img{
+             transition:transform 0.2s ease;
+             width: 380px;
+        }
+        .box9:hover img{
+            transform: scale(1.009);
+
         }
 
         .box10 {
@@ -160,6 +261,8 @@
             background-color: rgb(241, 237, 225);
             margin-top: -7px;
             margin-left: 150px;
+            overflow: hidden;
+            transition: all 0.3s ease;
         }
 
         .box11 {
@@ -191,6 +294,13 @@
             margin-top: 50px;
             margin-left: 150px;
             position: relative;
+            cursor: default;
+        }
+
+        .box144 {
+            display: flex;
+            margin-top: 250px;
+
         }
 
         .box15 {
@@ -199,10 +309,25 @@
             margin-left: 150px;
             position: relative;
         }
+        .box16{
+            width: 100%;
+            height: 50px;
+            font-size: 15px;
+            position: relative;
+            margin-top: 50px;
+            margin-left: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            color:white;
+
+        }
     </style>
 </head>
 
 <body>
+   <div class="add" style="max-width: 1200px;margin: 0 auto;padding-right: 250px;">
     <div class="box1">菲姿时尚集团
         <div class="box21">关于集团<div class="box22">集团简介
                 <div>发展历程</div>
@@ -228,12 +353,19 @@
     <div class="box5"><img src="img/aside-view.jpg">
         <div class="box6">集团介绍</div>
         <div class="box7">
-            创立于1992年的菲姿时尚集团是集研发、生产、品牌管理、服务于一体的大型现代化品牌企业。28年来集团始终坚持国际化的品牌经营理念，现已发展成为一家多品牌、集团化运作的知名时尚品牌企业。1999年集团总部落户上海，占地100多亩，坐拥近万平方现代时尚的办公环境。具有深厚品牌文化理念，自主创新研发设计中心、现代化生产基地、仓储物流、高效运营服务体系融合的时尚服装公司。集团目前拥有员工近3000名，菲姿时尚集团实施品牌战略，可持续发展，创新发展之路，不断加大品牌建设力度，为努力实现“集团品牌化，品牌集团化”奋斗，为中国服装产业转型升级和建设时尚品牌强国贡献自己的力量。
+            创立于1992年的菲姿时尚集团是集研发、生产、品牌管理、服务于一体的大型现代化品牌企业。28年来集团始终坚持国际化的品牌经营理念,现已发展成为一家多品牌、集团化运作的知名时尚品牌企业。1999年集团总部落户上海，占地100多亩，坐拥近万平方现代时尚的办公环境。具有深厚品牌文化理念，自主创新研发设计中心、现代化生产基地、仓储物流、高效运营服务体系融合的时尚服装公司。集团目前拥有员工近3000名，菲姿时尚集团实施品牌战略，可持续发展，创新发展之路，不断加大品牌建设力度，为努力实现“集团品牌化，品牌集团化”奋斗，为中国服装产业转型升级和建设时尚品牌强国贡献自己的力量。
         </div>
+        <div class="boxk1"></div>
+        <div class="boxk2" style="color: rgb(255, 255, 255);display:flex;justify-content: center;align-items: center;">
+            查看更多</div>
         <div class="box8">
-            <img src="img/box-p1.jpg">
-            <img src="img/box-p2.jpg" style="margin-left: 20px;">
+            <div class="boxb">LANAFAY</div>
         </div>
+        <div class="box81">
+            <div class="boxb">LANAFAY</div>
+        </div>
+        <img src="img/box-p1.jpg" style="margin-left: 20px;">
+        <img src="img/box-p2.jpg" style="margin-left: 20px;">
     </div>
 
 
@@ -265,30 +397,36 @@
             有限公司年度晚会于2019年3月29日在...[2019-04-19]</div>
         <div class="box13"><a href="" style="position: relative;left: 300px;top: 165px;color: black;">查看更多▶</a></div>
     </div>
-    <hr style="margin-top: 300px;">
+
     <div class="box14">
-        <div class="box13">关于集团</div>
-        <div class="box13">集团资讯</div>
-        <div class="box13">旗下品牌</div>
-        <div class="box13">人才发展</div>
-        <div class="box13" style="left: 220px;">联系我们</div>
+        <hr style="top: 200px;width:100%;position: absolute;">
+        <div class="box144">
+            <div class="box13">关于集团</div>
+            <div class="box13">集团资讯</div>
+            <div class="box13">旗下品牌</div>
+            <div class="box13">人才发展</div>
+            <div class="box13" style="left: 220px;">联系我们</div>
+        </div>
+      
     </div>
-    <div class="box15">
+    <div class="box15" style=" cursor: pointer">
         集团简介 <br>发展历程
         <br>企业文化
-        <div style="margin-left: 235px;">菲姿FEIZI
+        <div style="margin-left: 235px; cursor: pointer">菲姿FEIZI
             <br>啦娜菲LANFAY
         </div>
-        <div style="margin-left: 45px;">人才政治
+        <div style="margin-left: 45px; cursor: pointer">人才政治
             <br>工作机会
         </div>
-        <div style="margin-left: 310px;">TEL: 021-67626666
+        <div style="margin-left: 310px;cursor: pointer">TEL: 021-67626666
             <br>E-MAIL: HR@feizi.com
             <br>FAX: 021-67627878
             <br>总部:上海市松江区九亭镇久富开发区盛龙路1号
         </div>
     </div>
-
+    <div class="box16">COPYRIGHT@2016 FEIZI GROUP
+        <div style="color: rgb(171, 173, 174);">沪ICP备14042087号-1</div> </div>
+</div> 
 </body>
 
 </html>
